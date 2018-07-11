@@ -1,0 +1,70 @@
+@import '../../vars.scss';
+
+.rewards {
+  background: #fff;
+  border-radius: .5em;
+  box-shadow: 0 3px rgba(0,0,0, .1);
+  margin-top: 1em;
+}
+
+.nested-items {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.reward-item {
+  padding: 0.75em;
+  border-bottom: 1px solid $lighter-grey;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color .05s linear;
+}
+
+.reward-item:last-child {
+  border: none;
+}
+
+.reward-item__desc {
+  font-size: 1.25em;
+  padding-bottom: 0.5em;
+  width: 100%;
+}
+
+.reward-item__progress {
+  color: $grey;
+  width: 100%;
+}
+
+.reward-item__counter {
+  width: 3em;
+  text-align: center;
+  padding-top: 1.25em;
+  font-size: 1.25em;
+}
+
+.reward-item__logo-container {
+  margin-right: 1em;
+}
+
+.reward-item__logo {
+  display: flex;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 2px;
+}
+
+.reward-item:hover {
+  background-color: $lighter-grey;
+}
+
+.reward-item:active {
+  background-color: $grey;
+}
+
+.reward-item:focus {
+  background-color: $light-grey;
+  outline: none;
+}

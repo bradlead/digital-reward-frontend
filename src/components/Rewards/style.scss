@@ -1,0 +1,16 @@
+@import '../../vars.scss';
+
+.mzw-accounts {
+  display: flex;
+  flex-direction: column;
+}
+
+.rewards {
+  background: #fff;
+  border-radius: .5em;
+  box-shadow: 0 3px rgba(0,0,0, .1);
+}
+
+.rewards__container {
+  width: 100%;
+}

@@ -1,0 +1,52 @@
+@import './vars.scss';
+
+*::before, *, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Source Sans Pro', 'HelveticaNeue', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  color: $dark-blue;
+  background-color: $off-white;
+}
+
+.App {
+  width: 100%;
+  margin: 2em auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 58rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.monzo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.monzo-button {
+  padding: 0.5em 0.75em;
+  color: $white;
+  font-family: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: $light-blue;
+  border: 0;
+  border-radius: 5px;
+}
+
+.monzo-button:hover{
+  background-color:$blue;
+}
+
+.monzo-button:focus {
+  background-color: $blue;
+}

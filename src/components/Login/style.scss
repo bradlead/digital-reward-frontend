@@ -1,0 +1,40 @@
+@import '../../vars.scss';
+
+.mzw-login {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+@media (max-width: 800px) {
+  .mzw-login {
+    flex-direction: column;
+  }
+}
+
+.mzw-login__info,
+.mzw-login__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.mzw-login__info {
+  background-color: $dark-blue;
+  background-image: url('../../assets/monzo-bg.png');
+  background-position: center;
+  background-size: cover;
+  color: $white;
+}
+
+.mzw-login__form {
+  background: $lighter-grey;
+}
+
+.mzw-login__form > * {
+  margin-bottom: 1em;
+}

@@ -1,0 +1,80 @@
+@import '../../vars.scss';
+
+.monzo-accounts {
+  display: flex;
+  flex-direction: column;
+}
+
+.mzw-accounts__header-container {
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background: $dark-blue;
+}
+
+.mzw-accounts__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  @include container;
+}
+
+.mzw-accounts__search {
+  display: flex;
+  height: 7vh;
+}
+
+.mzw-accounts__search__text {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.mzw-accounts__search__input {
+  width: 100%;
+  padding: 1em;
+  font: inherit;
+  color: $dark-blue;
+  background-color: $white;
+  border: none;
+  outline: none;
+}
+
+.mzw-accounts__transactions {
+  display: flex;
+  height: 80vh;
+  width: 100%;
+  @include container;
+}
+
+.mzw-accounts__transactions__list {
+  padding-right: 1em;
+}
+
+.mzw-accounts__transactions__list,
+.mzw-accounts__transactions__detail {
+  margin: 3vh 0;
+  width: 50%;
+}
+
+@media (max-width: 800px) {
+  .mzw-accounts__transactions {
+    flex-direction: column;
+  }
+
+  .mzw-accounts__transactions__list,
+  .mzw-accounts__transactions__detail {
+    width: 100%;
+  }
+
+  .mzw-accounts__transactions__list {
+    padding-right: 0;
+    order: 2;
+  }
+
+  .mzw-accounts__transactions__detail {
+    order: 1;
+  }
+}

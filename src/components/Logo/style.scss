@@ -1,0 +1,24 @@
+@import '../../vars.scss';
+
+.inde-logo {
+  display: flex;
+  align-items: flex-start;
+  cursor: default;
+  user-select: none;
+}
+
+.inde-logo__image {
+  width: 220px;
+  height: auto;
+}
+
+.inde-logo--large .inde-logo__image {
+  width: 265px;
+}
+
+@media (max-width: 800px) {
+  .inde-logo {
+    overflow: hidden;
+    width: 265px;
+  }
+}

@@ -1,0 +1,51 @@
+// Main colors
+$off-white: #f5f5f5;
+$dark-blue: #14233c;
+$blue: #2b92a0;
+$light-blue: #50c5dc;
+$lighter-blue: #c3dbff;
+$white: #fff;
+
+$lighter-grey: #f7f7f7;
+$light-grey: #d3d3d3;
+$grey: #808080;
+$red: #7b315c;
+$green: #317b50;
+
+// Category colors
+$category-transport: #00738c;
+$category-groceries: #f69f00;
+$category-eatingOut: #7cd420;
+$category-cash: #00ba4d;
+$category-bills: #02a3da;
+$category-entertainment: #a660ff;
+$category-shopping: #f40083;
+$category-holidays: #ff794c;
+$category-family: #0040c6;
+$category-personalCare: #f00a0a;
+$category-holidays: #ff794c;
+$category-general: #707070;
+$category-expenses: #952b01;
+
+$body-width: 58rem;
+$global-gutter: 1rem;
+$mobile-breakpoint: 800px;
+
+@mixin container {
+  max-width: $body-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $global-gutter;
+  padding-right: $global-gutter;
+}
+
+// need to change to Sass
+:root {
+  --container: {
+    max-width: $body-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--global-gutter);
+    padding-right: var(--global-gutter);
+  }
+}
