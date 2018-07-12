@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import TokenManager from '../utils/token-manager';
+import Loader from '../components/Loader';
 
 class MonzoLogin extends React.Component {
   componentDidMount() {
@@ -12,12 +13,17 @@ class MonzoLogin extends React.Component {
         this.props.onLogin();
         this.props.history.push('/');
       })
-      .catch((error) => {
+      .catch(() => {
         this.props.history.push('/');
       });
   }
+
   render() {
-    return <p>Monzo API app</p>;
+    return (
+      <div className="App">
+        <Loader />
+      </div>
+    );
   }
 }
 

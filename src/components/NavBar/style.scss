@@ -29,3 +29,12 @@
   border: 0;
   margin: 0 0.75em;
 }
+
+.nav-link.active {
+  border-bottom: 1px solid;
+}
+
+.monzo-button.logout {
+  margin-left: 0.75em;
+  font-size: 0.85em;
+}

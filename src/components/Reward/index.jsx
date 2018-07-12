@@ -12,13 +12,12 @@ class Reward extends Component {
     super(props);
 
     this.state = {
-      /* account: [{
-      id: '',
-      description: '',
-      created: '',
-      type: ''
-      }] */
+      total: 0,
     };
+  }
+
+  componentDidMount() {
+    this.setState({ total: 8 });
   }
 
   render() {
@@ -28,17 +27,17 @@ class Reward extends Component {
           <MerchantLogo />
           <div className="nested-items">
             <RewardDescription description="Reward Description" />
-            <RewardProgress percent={60} />
+            <RewardProgress percent={Math.round(this.state.total * 100) / 9} />
           </div>
-          <TransactionCounter noOfTransactions={6} />
+          <TransactionCounter total={9} />
         </li>
         <li className="reward-item">
           <MerchantLogo />
           <div className="nested-items">
             <RewardDescription description="Reward Description blah blah get a free coffee" />
-            <RewardProgress percent={30} />
+            <RewardProgress percent={this.state.total} />
           </div>
-          <TransactionCounter noOfTransactions={3} />
+          <TransactionCounter total={3} />
         </li>
       </div>
     );

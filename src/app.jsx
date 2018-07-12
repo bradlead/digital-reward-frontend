@@ -1,10 +1,12 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+
 import AuthRoute from './components/auth-route';
 import NavBar from './components/NavBar';
 import Rewards from './components/Rewards';
 import Login from './components/Login';
 import MonzoLogin from './components/monzo-login';
+import Map from './components/Map';
 
 import TokenManager from './utils/token-manager';
 
@@ -33,16 +35,21 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <AuthRoute
-            exact
-            path="/"
-            component={NavBar}
-            authenticate={this.isLoggedIn}
+          path="/"
+          component={NavBar}
+          authenticate={this.isLoggedIn}
         />
         <Switch>
           <AuthRoute
             exact
             path="/"
             component={Rewards}
+            authenticate={this.isLoggedIn}
+          />
+          <AuthRoute
+            exact
+            path="/Map"
+            component={Map}
             authenticate={this.isLoggedIn}
           />
           <Route

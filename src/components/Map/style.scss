@@ -3,7 +3,6 @@
 .map-marker {
   display: block;
   margin-top: 5px;
-  min-width: 250px;
   font-size: 12px;
   font-family: 'Source Sans Pro', 'HelveticaNeue', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   color: $dark-blue;
@@ -11,10 +10,8 @@
 }
 
 .map-marker__image {
-  float: left;
   height: 3.5rem;
   width: 3.5rem;
-  margin-right: 1em;
   overflow: hidden;
   border-radius: 2px;
 }

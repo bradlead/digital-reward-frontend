@@ -7,9 +7,7 @@ class Account extends React.Component {
     super();
     this.state = {
       account: {
-        id: '',
         description: '',
-        created: '',
       },
     };
   }
@@ -17,14 +15,19 @@ class Account extends React.Component {
   componentDidMount() {
     axios.get('http://127.0.0.1:3000/account')
       .then((response) => {
-        this.setState({ account: response.data.account });
+        this.setState({ account: response.data[0].account });
         console.log('account:', response);
       })
-      axios.get('http://127.0.0.1:3000/transaction')
-      .then((response) => {
-        this.setState({ transaction: response.data });
-        console.log('transaction:', response);
-      })
+      // axios.get('http://127.0.0.1:3000/transaction')
+      // .then((response) => {
+      //   this.setState({ transaction: response.data });
+      //   console.log('transaction:', response);
+      // })
+      // axios.get('http://127.0.0.1:3000/rewards')
+      // .then((response) => {
+      //   this.setState({ reward: response.data });
+      //   console.log('reward:', response);
+      // })
       .catch(error => console.log(error))
 
   }

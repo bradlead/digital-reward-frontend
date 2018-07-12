@@ -1,6 +1,5 @@
 import React from 'react';
 import Logo from '../Logo';
-import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import TokenManager from '../../utils/token-manager';
 
@@ -22,9 +21,9 @@ class NavBar extends React.Component {
               My Rewards
             </NavLink>
             <NavLink className="nav-link" exact to="/Map">
-              Map
+              Near You
             </NavLink>
-            <button className="monzo-button" onClick={this.logout}>
+            <button className="monzo-button logout" onClick={this.logout}>
               Logout
             </button>
           </div>
