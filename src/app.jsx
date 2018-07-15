@@ -12,6 +12,26 @@ import TokenManager from './utils/token-manager';
 
 import './style.scss';
 
+const MyNewComponent = () => {
+  return (
+    <React.Fragment>
+      <NavBar />
+      <Switch>
+        <Route
+          exact
+          path="/"
+          component={Rewards}
+        />
+        <Route
+          exact
+          path="/Map"
+          component={Map}
+        />
+      </Switch>
+    </React.Fragment>
+  );
+};
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -34,24 +54,7 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <AuthRoute
-          path="/"
-          component={NavBar}
-          authenticate={this.isLoggedIn}
-        />
         <Switch>
-          <AuthRoute
-            exact
-            path="/"
-            component={Rewards}
-            authenticate={this.isLoggedIn}
-          />
-          <AuthRoute
-            exact
-            path="/Map"
-            component={Map}
-            authenticate={this.isLoggedIn}
-          />
           <Route
             exact
             path="/login"
@@ -65,6 +68,10 @@ class App extends React.Component {
             render={props => (
               <MonzoLogin {...props} onLogin={this.handleLogin} />
             )}
+          />
+          <AuthRoute
+            component={MyNewComponent}
+            authenticate={this.isLoggedIn}
           />
         </Switch>
       </React.Fragment>

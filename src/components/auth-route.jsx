@@ -20,7 +20,7 @@ const AuthRoute = ({
 
 AuthRoute.propTypes = {
   exact: PropTypes.bool,
-  path: PropTypes.string.isRequired,
+  path: PropTypes.string,
   component: PropTypes.func.isRequired,
   authenticate: PropTypes.func.isRequired,
 };

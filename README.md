@@ -7,12 +7,16 @@ Backend repo: https://github.com/SharifCoding/digi-reward-back
 project
 |-- src
 |   |-- assets
+|   |   |-- check.gif
 |   |   |-- indespendent.svg
 |   |   |-- logo.svg
 |   |   |-- monzo-bg.png
 |   |   |-- whirly.png
 |   |-- components
 |   |   |-- Account
+|   |   |   |-- index.jsx
+|   |   |   |-- style.scss
+|   |   |-- BigTick
 |   |   |   |-- index.jsx
 |   |   |   |-- style.scss
 |   |   |-- Loader
