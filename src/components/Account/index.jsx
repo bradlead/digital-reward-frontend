@@ -16,7 +16,6 @@ class Account extends React.Component {
     axios.get('http://127.0.0.1:3000/account')
     .then((response) => {
       this.setState({ account: response.data[0].account });
-      console.log('account:', response);
     })
     .catch(error => console.log(error))
   }
@@ -26,10 +25,9 @@ class Account extends React.Component {
       <div>
         <div className="monzo-accounts">
           <h1>
-            My Rewards
+            {this.state.account.description}'s Rewards
           </h1>
         </div>
-        <h2>Hello {this.state.account.description}, here are your rewards...</h2>
       </div>
     );
   }

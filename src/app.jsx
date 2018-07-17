@@ -12,7 +12,7 @@ import TokenManager from './utils/token-manager';
 
 import './style.scss';
 
-const MyNewComponent = () => {
+const AppRoutes = () => {
   return (
     <React.Fragment>
       <NavBar />
@@ -70,7 +70,7 @@ class App extends React.Component {
             )}
           />
           <AuthRoute
-            component={MyNewComponent}
+            component={AppRoutes}
             authenticate={this.isLoggedIn}
           />
         </Switch>

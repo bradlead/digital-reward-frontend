@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 const TransactionCounter = props => (
   <div className="reward-item__counter">
-    {props.total}
+    {props.count}
     /9
   </div>
 );
 
 TransactionCounter.propTypes = {
-  total: PropTypes.number.isRequired,
+  count: PropTypes.number.isRequired,
 };
 
 export default TransactionCounter;
