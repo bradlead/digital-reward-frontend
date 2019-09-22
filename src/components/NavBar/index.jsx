@@ -18,6 +18,9 @@ class NavBar extends React.Component {
           <Logo />
           <div>
             <NavLink className="nav-link" exact to="/">
+              Retailers
+            </NavLink>
+            <NavLink className="nav-link" exact to="/">
               My Rewards
             </NavLink>
             <NavLink className="nav-link" exact to="/Map">

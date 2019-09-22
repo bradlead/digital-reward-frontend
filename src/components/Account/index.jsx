@@ -15,7 +15,7 @@ class Account extends React.Component {
   componentDidMount() {
     axios.get('http://127.0.0.1:3000/account')
     .then((response) => {
-      this.setState({ account: response.data[0].account });
+      this.setState({ account: response.data[1].account });
     })
     .catch(error => console.log(error))
   }
