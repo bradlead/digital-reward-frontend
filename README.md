@@ -1,8 +1,8 @@
 ## Class Project (Frontend) - Monzo Reward Web App
 
-Backend repo: https://github.com/SharifCoding/digi-reward-back
+Backend repo: https://github.com/bradlead/digital-reward.git
 
-![Login page](./src/assets/front-end.png)
+![Login page](./src/assets/front-end2.png)
 #### File Structure
 ```bash
 project
