@@ -2,7 +2,7 @@
 
 Backend repo: https://github.com/SharifCoding/digi-reward-back
 
-![Login page](../src/assets/front-end.png)
+![Login page](./src/assets/front-end.png)
 #### File Structure
 ```bash
 project
